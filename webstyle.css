@@ -1,0 +1,150 @@
+body {
+	background: url(images/nav-bg.jpg) no-repeat;
+	background-size: 100%;
+	color: #747474;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+}
+
+/* Main white container in middle of screen */
+div#mainContainer {
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+	border: thin solid navy;
+	height: 100%;
+	background-color: white;
+	padding-top: 10px;
+}
+
+/* Title Div*/
+div#titleDiv {
+	margin-top: 10px;
+	margin-left: 20px;
+	color: #1A197E;
+	font-size: 25px;
+	float: left;
+	width: 100%;
+}
+
+
+/* Top menu on page */
+div#topMenu {
+    float: top;
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+	height: 50px;
+	border: thin solid navy;
+	background: url(images/menu-bg.png) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+
+a:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+/* Default behaviour for a tags */
+a {
+	cursor: pointer;
+	color: #fff;
+	text-decoration: none;
+}
+
+
+
+/* individual menu item */
+div.menuItem {
+	font-size: 25px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-decoration: italic;
+	float: left;
+}
+
+/* Menu link */
+a.menu {
+	border-right: 2px solid #FFFFFF;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+
+
+
+
+
+
+
+/* main body css */
+div#container
+{
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+	border: thin solid navy;
+	height: 100%;
+	background-color: white;
+	padding-top: 10px;
+}
+
+/* Title Div*/
+div#titleDiv {
+	margin-top: 10px;
+	margin-left: 20px;
+	color: #1A197E;
+	font-size: 25px;
+	float: left;
+	width: 100%;
+}
+
+/* Left panel */
+div#leftPanel {
+	padding: 20px;
+	width: 250px;
+	float: left;
+}
+
+/* Right Panel */
+div#rightPanel {
+	float: right;
+	width: 610px;
+	padding: 20px;
+}
+
+span.question {
+	font-weight: bold;
+	width: 150px;
+	font-size: 15px;
+	float: left;
+}
+
+span.answer {
+	width: 250px;
+	font-size: 15px;
+	float: left;
+}
+
+p.details {
+	width: 550px;
+	font-size: 15px;
+	text-align: justify;
+}
+
+div#summaryPanel {
+	width: 100%;
+	padding-top: 10px;
+	float: left;
+}
+
+/* Profile Pic */
+img#profile {
+	height: 250px;
+}

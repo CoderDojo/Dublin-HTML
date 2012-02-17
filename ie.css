@@ -1,0 +1,22 @@
+body
+{
+	/*Degrade Image*/
+	background : #044e95;
+	
+	/*Align body to center divs*/
+	text-align: center; 
+}
+
+div#topMenu {
+	/*Degrade Image*/
+	background : #48b2de;
+	
+	/*Align topMenu with container*/
+	width: 980px;
+}
+
+div#container
+{
+	/*Because we centered the body we need to left the container*/
+	text-align: left;
+}
