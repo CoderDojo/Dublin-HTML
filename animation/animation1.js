@@ -11,5 +11,5 @@ function setup() {
 function animate()
 {
 	logo.style.left = parseInt(logo.style.left) + 2 + 'px';
-	animator = setTimeout("animate()",20);
+	animator = setTimeout(animate,20);
 }

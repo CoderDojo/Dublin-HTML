@@ -5,15 +5,23 @@ var logo;
 var moveRight = true;
 var run = true;
 var time;
-
+var distance;
+function TangleProperties()
+{
+			
+}
 
 function setup() {
   logo = document.getElementById('logo');; // get the "image" object
   logo.style.left = '0px'; // set its initial position to 0px
   logo.onclick=new Function("toggleAnimate()");
   var tangle = new Tangle(document, {
-    initialize: function () { this.time = 3; },
-    update:     function () { time = this.time; }
+    initialize: function () { this.time = 3;
+    						  this.distance = 2; },
+    update:     function () { 
+    							time = this.time;
+    							distance = this.distance; 
+    						}
 	});
     
   animate(); // start animating
@@ -33,11 +41,10 @@ function animate()
 	
 	if(moveRight == true)
 	{
-		logo.style.left = parseInt(logo.style.left) + 2 + 'px';
+		logo.style.left = parseInt(logo.style.left) + distance + 'px';
 	}else
 	{
-		logo.style.left = parseInt(logo.style.left) - 2 + 'px';
-		
+		logo.style.left = parseInt(logo.style.left) - distance + 'px';	
 	}
 	animator = setTimeout("animate()",time);
 	console.log(time);

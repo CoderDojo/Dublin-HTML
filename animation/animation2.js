@@ -8,9 +8,15 @@ var run = true;
 
 
 function setup() {
-  logo = document.getElementById('logo');; // get the "image" object
+  logo = document.createElement('img');
+  logo.src = "../images/coder.png";
   logo.style.left = '0px'; // set its initial position to 0px
-  logo.onclick=new Function("toggleAnimate()");
+  logo.style.width = '50px';
+  logo.style.height = '50px';
+  logo.style.position = "absolute";
+  logo.onclick = toggleAnimate;
+  document.body.appendChild(logo);
+  
   animate(); // start animating
   	
 }
@@ -34,7 +40,7 @@ function animate()
 		logo.style.left = parseInt(logo.style.left) - 2 + 'px';
 		
 	}
-	animator = setTimeout("animate()",20);
+	animator = setTimeout(animate,20);
 }
 
 function toggleAnimate()
@@ -43,7 +49,7 @@ function toggleAnimate()
 
 	if(run)
 	{
-		animator = setTimeout("animate()",20);
+		animator = setTimeout(animate,20);
 	}else
 	{
 		clearTimeout(animator);
