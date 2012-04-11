@@ -1,6 +1,8 @@
-window.onload = bounce;
+// When the window loads, run the setup() function
+window.onload = setup;
 
-var winW = 630, winH = 460;
+// Some default window sizes
+// var winW = 630, winH = 460;
 
 // Initial ball position, horizontal
 var x = 0;
@@ -17,9 +19,38 @@ var v = 0;
 // gravity factor
 var g = 4;
 
-// How bouncy is the ball: 1.0 means it bounces perfectly, < 1 means it will eventually slow down and stop
+
+// How bouncy is the ball:
+// 1.0 means it bounces perfectly, < 1 means it will eventually slow down and stop
 // > 1, well ... : what do you think that will do :-) 
 var bouncy = 1.0;
+
+
+function setup() {
+    
+    // "Register" for keypress events
+    document.body.onkeypress = slowDown;
+    
+    // Make a container to hold the ball
+    container = document.createElement('div');
+    container.id = 'ball';
+    
+    // Make the ball
+    image = document.createElement('img');
+    image.src = "../images/football.jpg";
+    
+    // Use CSS to set the size of the ball
+    image.setAttribute("class", "medium");
+    
+    // Add the ball into the container
+    container.appendChild(image);
+    
+    // Add the container to the page: this shows the ball too
+    document.body.appendChild(container);
+  
+    // Start bouncing
+    bounce(); 
+}
 
 //
 // Simulate a bouncing ball
@@ -27,7 +58,7 @@ var bouncy = 1.0;
  
 function bounce() {
 
-    // Get the ball by searching for it by name 
+    // Get the ball by searching for it by id 
     var e = document.getElementById('ball');
      
     // Very simple "bounce" simulation: velocity increases with "gravity" over time
