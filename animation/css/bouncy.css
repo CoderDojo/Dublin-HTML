@@ -1,0 +1,29 @@
+body {
+ margin:5px 0px; 
+ padding:10px;
+ text-align:center;
+}
+
+div#ball {
+ /* simple box */
+ position:absolute;
+ left:0px;
+ top : 0px;
+ width : 50px;
+ height: 50px;
+}
+
+img.medium {
+  width: 50px;
+  height: 50px;
+}
+
+img.big {
+    width: 100px;
+    height: 100px;
+}
+
+img.tiny {
+    width: 20px;
+    height: 20px;
+}
