@@ -1,9 +1,6 @@
 // When the window loads, run the setup() function
 window.onload = setup;
 
-// Some default window sizes
-// var winW = 630, winH = 460;
-
 // Initial ball position, horizontal
 var x = 0;
 
