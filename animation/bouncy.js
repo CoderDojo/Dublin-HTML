@@ -17,14 +17,12 @@ var h = 10;
 var v = 0;
 
 // gravity factor
-var g = 4;
-
+var g = 3;
 
 // How bouncy is the ball:
 // 1.0 means it bounces perfectly, < 1 means it will eventually slow down and stop
 // > 1, well ... : what do you think that will do :-) 
 var bouncy = 1.0;
-
 
 function setup() {
     
@@ -62,7 +60,7 @@ function bounce() {
     var e = document.getElementById('ball');
      
     // Very simple "bounce" simulation: velocity increases with "gravity" over time
-    // This isn't exactly perfect for small values of v
+    // This isn't exactly perfect for small values of v. Nor is it correct Physics either. But it looks OK.
     v=v+g;
    
     // Move horizontally
