@@ -67,7 +67,10 @@ function bounce() {
     y=y+v;
     
     // If the vertical movement is nearly zero, and the vertical position is the bottom of the window, we've stopped bouncing
-    if( y >= (winH-50) && v <= 1) return;
+    if( y >= (winH-50) && v <= 1) 
+    {
+        return;
+    }
     
     // If outside the window to the right, reverse direction
     if(x > (winW - 50))
