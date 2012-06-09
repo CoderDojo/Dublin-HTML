@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>Guess the number game</title>
+<script type="text/javascript">
+var target=5;
+var guesses=5;
+var name="";
+
+function clicked(number) {
+	if ( guesses == 0 ) {
+		alert("Game over");
+	} else {
+		guesses--;  // guesses = guesses - 1; or guesses -= 1;
+		if ( number == target ) {
+			alert("You got it right!");
+		} else {
+			alert("Try again");
+		}
+	}
+}
+
+function pageLoaded() {
+name=prompt("Enter your name");
+}
+</script>
+</head>
+<body onload="pageLoaded()">
+<button id="but1" onclick="clicked(1)">1</button>
+<button id="but2" onclick="clicked(2)">2</button>
+<button id="but3" onclick="clicked(3)">3</button>
+<button id="but4" onclick="clicked(4)">4</button>
+<button id="but5" onclick="clicked(5)">5</button>
+<button id="but6" onclick="clicked(6)">6</button>
+<button id="but7" onclick="clicked(7)">7</button>
+<button id="but8" onclick="clicked(8)">8</button>
+<button id="but9" onclick="clicked(9)">9</button>
+<button id="but10" onclick="clicked(10)">10</button>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>Guess the number game</title>
+<script type="text/javascript">
+var target=0;
+var msgDiv;
+// checkGuess:
+//	obj: a reference to the button object 
+//	value: the value being guessed
+function checkGuess(obj,value) {
+	if ( value == target ) {
+		outputMessage("You guessed correctly");
+		resetButtons();
+		getNewTarget();
+	} else {
+		outputMessage("Incorrect");
+		obj.disabled=true;
+	}
+}
+
+// getNewTarget: - Set a new value for the number that we're trying to guess
+function getNewTarget() {
+	target=Math.floor((0.1+Math.random())*10);
+	setTarget(target);
+}
+
+// pageLoaded: Used to initialise things when the page is first loaded.
+function pageLoaded() {
+	getNewTarget();			// Get a target value
+	msgDiv = getMsgDiv();	// Find the user output div.
+}
+
+// resetButtons: Enables all of the buttons on the page.
+function resetButtons() {
+	var buttons = document.getElementsByTagName("button");
+	for(var i=0; i< buttons.length; i++) {
+		var btn = buttons.item(i);
+		btn.disabled = false;
+	}
+}
+
+// Return a reference to the msgOutput div for displaying messages to the user.
+function getMsgDiv() {
+	return document.getElementById("msgOutput");
+}
+
+// Store the target value that we're trying to guess to a div (for debugging purposes)
+function setTarget(target) {
+	var outDiv = document.getElementById("targetOutput");
+	if (outDiv != null) {
+		outDiv.innerHTML = target;
+	}
+}
+
+// Write a message into the user message area on the page.
+function outputMessage(message) {
+	msgDiv.innerHTML = message;
+}
+
+</script>
+
+</head>
+<body onload="pageLoaded()">
+<button id="but1" onclick="checkGuess(this,1)">1</button>
+<button id="but2" onclick="checkGuess(this,2)">2</button>
+<button id="but3" onclick="checkGuess(this,3)">3</button>
+<button id="but4" onclick="checkGuess(this,4)">4</button>
+<button id="but5" onclick="checkGuess(this,5)">5</button>
+<button id="but6" onclick="checkGuess(this,6)">6</button>
+<button id="but7" onclick="checkGuess(this,7)">7</button>
+<button id="but8" onclick="checkGuess(this,8)">8</button>
+<button id="but9" onclick="checkGuess(this,9)">9</button>
+<button id="but10" onclick="checkGuess(this,10)">10</button>
+<br/>
+<div id="msgOutput"></div><br/>
+<div style="display:none" id="targetOutput"></div>
+</body>
+</html>
