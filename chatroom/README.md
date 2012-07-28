@@ -13,7 +13,7 @@ v0.8.4
 ```
 > mkdir chatroom
 ```
-4. Copy the index.html and server.js from this project into the the folder
+4. Copy the index.html and server.js from this project into the chatroom folder
 5. In the terminal/cmd window cd into the chatroom directory
 ```
 > cd chatroom
@@ -24,6 +24,7 @@ v0.8.4
 ```
 7. Find out the IP address of your machine (ifconfig on mac, ipconfig on windows)
 8. change the http://localhost in the index html to be the same as your computer.
+So line 5 in index.html should look like
 ```
 var socket = io.connect('http://192.168.1.1');
 ```
