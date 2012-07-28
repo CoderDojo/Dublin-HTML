@@ -1,8 +1,8 @@
 # SocketIO Chatroom
 
 1. Make sure you have installed [node.js](http://www.nodejs.org/#download) on your machine
-2. Open a terminal terminal/cmd
-3. In the window create a folder called chatroom on your machine
+2. Open a terminal/cmd box
+3. In the black window create a folder called chatroom on your machine
 ```
 > mkdir chatroom
 ```
